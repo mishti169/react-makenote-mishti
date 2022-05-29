@@ -1,0 +1,6 @@
+.NoteItemWrapper {
+	border: 2px solid;
+	min-width: 300px;
+	min-height: 200px;
+	border-radius: 6px;
+}

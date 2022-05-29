@@ -1,0 +1,22 @@
+.takeNoteWrapper {
+	border: 1px solid;
+	min-height: 200px;
+	max-width: 600px;
+	padding: 30px;
+}
+.inputBox {
+	border: 5px solid dotted green;
+	color: gray;
+	display: block;
+	border: none;
+	font-size: 20px;
+	border: 1px solid gray;
+}
+input:focus {
+	outline: none;
+}
+.titleInputBox {
+}
+.noteInputBox {
+	margin-top: 30px;
+}

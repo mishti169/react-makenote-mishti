@@ -1,25 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header/Header';
+import TakeNote from './Components/TakeNote/TakeNote';
+import NoteList from './Components/NoteList/NoteList';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	let pinnedNotes = [
+		{ title: 'title1', text: 'text1' },
+		{ title: 'title2', text: 'text2' },
+		{ title: 'title3', text: 'text3' },
+		{ title: 'title4', text: 'text4' },
+		{ title: 'title5', text: 'text5' },
+		{ title: 'title6', text: 'text6' },
+	];
+	let othersNotes = [
+		{ title: 'title1', text: 'text1' },
+		{ title: 'title2', text: 'text2' },
+		{ title: 'title3', text: 'text3' },
+		{ title: 'title4', text: 'text4' },
+		{ title: 'title5', text: 'text5' },
+		{ title: 'title6', text: 'text6' },
+	];
+	return (
+		<div className='App'>
+			<Header />
+			<TakeNote />
+			<NoteList title='pinned' notes={pinnedNotes} />
+			<NoteList title='others' notes={othersNotes} />
+		</div>
+	);
 }
 
 export default App;

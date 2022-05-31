@@ -20,6 +20,8 @@ const TakeNote = () => {
 		console.log(x);
 		console.log(othersNotes);
 		setOthersNote([x, ...othersNotes]);
+		setTextVal('');
+		setTitleVal('');
 	};
 	const onPinNote = () => {
 		console.log('pinneed');
@@ -35,7 +37,6 @@ const TakeNote = () => {
 				>
 					<i class='fa-solid fa-thumbtack '></i>
 				</button>
-
 				<div>
 					<input
 						placeholder='Title'

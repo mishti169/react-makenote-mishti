@@ -6,7 +6,7 @@
 	position: relative;
 }
 .NoteItemWrapper:hover {
-	background-color: pink;
+	background-color: gray;
 }
 
 .pinAndTrashBtn {

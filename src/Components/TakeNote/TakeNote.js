@@ -17,16 +17,17 @@ const TakeNote = () => {
 	};
 	const onSaveNote = () => {
 		const x = { title: titleVal, text: textVal };
-		console.log(x);
-		console.log(othersNotes);
 		setOthersNote([x, ...othersNotes]);
 		setTextVal('');
 		setTitleVal('');
 	};
 	const onPinNote = () => {
-		console.log('pinneed');
 		const y = { title: titleVal, text: textVal };
 		setPinnedNotes([y, ...pinnedNotes]);
+	};
+	const onDelEmptyMakeNote = () => {
+		setTextVal('');
+		setTitleVal('');
 	};
 	return (
 		<>
@@ -35,7 +36,7 @@ const TakeNote = () => {
 					onClick={onPinNote}
 					className='addNoteTrashAndPinBtn pinBtnOfTakeNote'
 				>
-					<i class='fa-solid fa-thumbtack '></i>
+					<i className='fa-solid fa-thumbtack '></i>
 				</button>
 				<div>
 					<input
@@ -55,8 +56,11 @@ const TakeNote = () => {
 					/>
 				</div>
 				<div className='addNoteBtnAndTrashBtnContainer'>
-					<button className='addNoteTrashAndPinBtn'>
-						<i class='fa-solid fa-trash'></i>
+					<button
+						className='addNoteTrashAndPinBtn'
+						onClick={onDelEmptyMakeNote}
+					>
+						<i className='fa-solid fa-trash'></i>
 					</button>
 					<button onClick={onSaveNote} className='addNoteTrashAndPinBtn'>
 						Add Note

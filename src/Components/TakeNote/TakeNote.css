@@ -30,15 +30,15 @@ input:focus {
 	justify-content: space-between;
 	align-items: center;
 }
-.addTakeNoteTrashAndPinBtn {
+.addNoteTrashAndPinBtn {
 	/* border-radius: 50%; */
 	background: transparent;
 	cursor: pointer;
 	border: none;
-	font-size: 16px;
+	font-size: 18px;
 }
 
-.pinBtnOfMakeNote {
+.pinBtnOfTakeNote {
 	display: flex;
 	color: brown;
 	position: absolute;

@@ -3,15 +3,24 @@
 	min-width: 300px;
 	min-height: 200px;
 	border-radius: 6px;
+	position: relative;
 }
 .NoteItemWrapper:hover {
 	background-color: pink;
 }
 
-.trashBtn {
-	color: brown;
+.pinAndTrashBtn {
+	font-size: 18px;
+	position: absolute;
+	background: transparent;
+	border: none;
 }
 
-.pinBtn {
-	color: green;
+.pin {
+	top: 20px;
+	right: 20px;
+}
+.trash {
+	left: 20px;
+	bottom: 20px;
 }

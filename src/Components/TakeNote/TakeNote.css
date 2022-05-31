@@ -3,14 +3,15 @@
 	min-height: 200px;
 	max-width: 600px;
 	padding: 30px;
+	position: relative;
 }
 .inputBox {
-	border: 5px solid dotted green;
-	color: gray;
+	/* color: gray; */
 	display: block;
 	border: none;
 	font-size: 20px;
-	border: 1px solid gray;
+	/* border: 1px solid gray; */
+	resize: none;
 }
 input:focus {
 	outline: none;
@@ -19,4 +20,28 @@ input:focus {
 }
 .noteInputBox {
 	margin-top: 30px;
+}
+.noteInputBox:focus {
+	outline: none;
+}
+
+.addNoteBtnAndTrashBtnContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.addTakeNoteTrashAndPinBtn {
+	/* border-radius: 50%; */
+	background: transparent;
+	cursor: pointer;
+	border: none;
+	font-size: 16px;
+}
+
+.pinBtnOfMakeNote {
+	display: flex;
+	color: brown;
+	position: absolute;
+	right: 20px;
+	font-size: 20px;
 }

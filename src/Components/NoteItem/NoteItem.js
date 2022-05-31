@@ -5,8 +5,16 @@ const NoteItem = (props) => {
 	return (
 		<>
 			<div className='NoteItemWrapper'>
-				<h3>{props.title}</h3>
-				<h6>{props.text}</h6>
+				<button className='pinBtn'>
+					<i class='fa-solid fa-thumbtack'></i>
+				</button>
+				<div>
+					<h3>{props.title}</h3>
+					<h6>{props.text}</h6>
+				</div>
+				<button className='trashBtn'>
+					<i class='fa-solid fa-trash'></i>
+				</button>
 			</div>
 		</>
 	);

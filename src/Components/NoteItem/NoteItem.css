@@ -4,3 +4,14 @@
 	min-height: 200px;
 	border-radius: 6px;
 }
+.NoteItemWrapper:hover {
+	background-color: pink;
+}
+
+.trashBtn {
+	color: brown;
+}
+
+.pinBtn {
+	color: green;
+}

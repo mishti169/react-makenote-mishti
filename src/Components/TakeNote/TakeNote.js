@@ -29,6 +29,13 @@ const TakeNote = () => {
 	return (
 		<>
 			<div className='takeNoteWrapper'>
+				<button
+					onClick={onPinNote}
+					className='addTakeNoteTrashAndPinBtn pinBtnOfMakeNote'
+				>
+					<i class='fa-solid fa-thumbtack '></i>
+				</button>
+
 				<div>
 					<input
 						placeholder='Title'
@@ -46,9 +53,13 @@ const TakeNote = () => {
 						onChange={changeTextInputVal}
 					/>
 				</div>
-				<div>
-					<button onClick={onSaveNote}>Add Note</button>
-					<button onClick={onPinNote}>Pin Note</button>
+				<div className='addNoteBtnAndTrashBtnContainer'>
+					<button className='addTakeNoteTrashAndPinBtn'>
+						<i class='fa-solid fa-trash'></i>
+					</button>
+					<button onClick={onSaveNote} className='addTakeNoteTrashAndPinBtn'>
+						Add Note
+					</button>
 				</div>
 			</div>
 		</>

@@ -7,51 +7,44 @@ import './NoteItem.css';
 const NoteItem = (props) => {
 	const [othersNotes, setOthersNote] = useAtom(otherNote);
 	const [pinnedNotes, setPinnedNotes] = useAtom(pinNote);
+	const { type, id } = props;
 
-	const onDelRemoveNoteItem = () => {
-		if (props.type === 'pinned') {
-			const remainingNotes = pinnedNotes.filter(
-				(currVal) => currVal.id !== props.id
-			);
-			console.log(remainingNotes);
+	const onDelete = () => {
+		if (type === 'pinned') {
+			const remainingNotes = pinnedNotes.filter((currVal) => currVal.id !== id);
 			setPinnedNotes(remainingNotes);
 		} else {
-			const remainingNotes = othersNotes.filter(
-				(currVal) => currVal.id !== props.id
-			);
+			const remainingNotes = othersNotes.filter((currVal) => currVal.id !== id);
 			setOthersNote(remainingNotes);
 		}
 	};
 
-	const onPinAddNoteToPin = () => {
+	const onPin = () => {
 		if (props.type === 'pinned') {
-			console.log('called');
-			const removedNotes = remove(
-				pinnedNotes,
-				(currVal) => currVal.id === props.id
-			);
+			const x = remove(pinnedNotes, (currVal) => currVal.id === props.id);
 			setPinnedNotes([...pinnedNotes]);
-			setOthersNote([...removedNotes, ...othersNotes]);
+			setOthersNote([...x, ...othersNotes]);
 		} else {
-			const removedNotes = remove(
-				othersNotes,
-				(currVal) => currVal.id === props.id
-			);
-			setPinnedNotes([...removedNotes, ...pinnedNotes]);
+			const x = remove(othersNotes, (currVal) => currVal.id === props.id);
+			setPinnedNotes([...x, ...pinnedNotes]);
 			setOthersNote([...othersNotes]);
 		}
 	};
 
 	return (
 		<div className='NoteItemWrapper'>
-			<button className='pin pinAndTrashBtn' onClick={onPinAddNoteToPin}>
-				<i className='fa-solid fa-thumbtack'></i>
+			<button className='pin pinAndTrashBtn' onClick={onPin}>
+				<i
+					className={`fa-solid fa-thumbtack ${
+						type === 'others' ? 'pinRotate' : ''
+					}`}
+				></i>
 			</button>
 			<div>
 				<h3>{props.title}</h3>
 				<h6>{props.text}</h6>
 			</div>
-			<button className='trash pinAndTrashBtn' onClick={onDelRemoveNoteItem}>
+			<button className='trash pinAndTrashBtn' onClick={onDelete}>
 				<i className='fa-solid fa-trash'></i>
 			</button>
 		</div>

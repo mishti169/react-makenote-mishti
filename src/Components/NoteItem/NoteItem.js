@@ -1,4 +1,5 @@
 import { useAtom } from 'jotai';
+import { remove } from 'lodash-es';
 import React from 'react';
 import { otherNote, pinNote } from '../../globalAtom';
 import './NoteItem.css';
@@ -23,7 +24,22 @@ const NoteItem = (props) => {
 	};
 
 	const onPinAddNoteToPin = () => {
-		console.log('add pin note ');
+		if (props.type === 'pinned') {
+			console.log('called');
+			const removedNotes = remove(
+				pinnedNotes,
+				(currVal) => currVal.id === props.id
+			);
+			setPinnedNotes([...pinnedNotes]);
+			setOthersNote([...removedNotes, ...othersNotes]);
+		} else {
+			const removedNotes = remove(
+				othersNotes,
+				(currVal) => currVal.id === props.id
+			);
+			setPinnedNotes([...removedNotes, ...pinnedNotes]);
+			setOthersNote([...othersNotes]);
+		}
 	};
 
 	return (

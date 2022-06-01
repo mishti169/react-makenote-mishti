@@ -12,8 +12,8 @@ function App() {
 		<div className='App'>
 			<Header />
 			<TakeNote />
-			<NoteList title='pinned' notes={pinnedNotes} />
-			<NoteList title='others' notes={othersNotes} />
+			<NoteList title='Pinned' notes={pinnedNotes} id='pinned' />
+			<NoteList title='Others' notes={othersNotes} id='others' />
 		</div>
 	);
 }

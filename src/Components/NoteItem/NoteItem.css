@@ -5,10 +5,6 @@
 	border-radius: 6px;
 	position: relative;
 }
-.NoteItemWrapper:hover {
-	background-color: gray;
-}
-
 .pinAndTrashBtn {
 	font-size: 18px;
 	position: absolute;
@@ -19,7 +15,13 @@
 .pin {
 	top: 20px;
 	right: 20px;
+	color: brown;
 }
+
+.pinRotate {
+	transform: rotate(45deg);
+}
+
 .trash {
 	left: 20px;
 	bottom: 20px;

@@ -8,6 +8,15 @@ const TakeNote = () => {
 	const [textVal, setTextVal] = useAtom(inputText);
 	const [othersNotes, setOthersNote] = useAtom(otherNote);
 	const [pinnedNotes, setPinnedNotes] = useAtom(pinNote);
+
+	const getCurrentTypedNote = () => {
+		return {
+			title: titleVal,
+			text: textVal,
+			id: parseInt(Math.random() * 1000),
+		};
+	};
+
 	const changeTitleInputVal = (event) => {
 		setTitleVal(event.target.value);
 	};
@@ -16,13 +25,13 @@ const TakeNote = () => {
 		setTextVal(event.target.value);
 	};
 	const onSaveNote = () => {
-		const x = { title: titleVal, text: textVal };
+		const x = getCurrentTypedNote();
 		setOthersNote([x, ...othersNotes]);
 		setTextVal('');
 		setTitleVal('');
 	};
 	const onPinNote = () => {
-		const y = { title: titleVal, text: textVal };
+		const y = getCurrentTypedNote();
 		setPinnedNotes([y, ...pinnedNotes]);
 	};
 	const onDelEmptyMakeNote = () => {

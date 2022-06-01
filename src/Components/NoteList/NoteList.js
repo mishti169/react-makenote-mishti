@@ -7,7 +7,15 @@ const NoteList = (props) => {
 			<h2>{props.title}</h2>
 			<div className='notesWrapper'>
 				{props.notes.map(function (currVal) {
-					return <NoteItem title={currVal.title} text={currVal.text} />;
+					return (
+						<NoteItem
+							key={currVal.id}
+							title={currVal.title}
+							text={currVal.text}
+							id={currVal.id}
+							type={props.title}
+						/>
+					);
 				})}
 			</div>
 		</>

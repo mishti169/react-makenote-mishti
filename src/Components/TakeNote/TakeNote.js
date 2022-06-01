@@ -43,7 +43,7 @@ const TakeNote = () => {
 			<div className='takeNoteWrapper'>
 				<button
 					onClick={onPinNote}
-					className='addNoteTrashAndPinBtn pinBtnOfTakeNote'
+					className='addNoteTrashAndPinBtn pinBtnOfTakeNote pinRotate'
 				>
 					<i className='fa-solid fa-thumbtack '></i>
 				</button>

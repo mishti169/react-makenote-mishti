@@ -31,7 +31,6 @@ input:focus {
 	align-items: center;
 }
 .addNoteTrashAndPinBtn {
-	/* border-radius: 50%; */
 	background: transparent;
 	cursor: pointer;
 	border: none;
@@ -44,5 +43,4 @@ input:focus {
 	position: absolute;
 	right: 20px;
 	font-size: 20px;
-	transform: rotate(45deg);
 }

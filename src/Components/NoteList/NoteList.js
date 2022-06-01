@@ -13,7 +13,7 @@ const NoteList = (props) => {
 							title={currVal.title}
 							text={currVal.text}
 							id={currVal.id}
-							type={props.title}
+							type={props.id}
 						/>
 					);
 				})}

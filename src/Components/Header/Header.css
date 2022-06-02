@@ -1,0 +1,28 @@
+.headerWrapper {
+	display: flex;
+	justify-content: space-between;
+	background-color: aliceblue;
+}
+.editNoteIcon {
+	font-size: 40px;
+}
+.titleIconWrapper {
+	display: flex;
+	align-items: center;
+}
+.noteBook {
+	z-index: 5;
+}
+.pen {
+	position: absolute;
+	left: 1rem;
+	font-size: 36px;
+}
+.headerTitle {
+	font-family: 'Patrick Hand SC', cursive;
+	font-size: xx-large;
+}
+.headerLink {
+	display: flex;
+	align-items: center;
+}

@@ -1,4 +1,9 @@
+* {
+	font-family: 'Patrick Hand SC', cursive;
+	box-sizing: border-box;
+}
 .App {
 	/* text-align: center; */
 	box-sizing: border-box;
+	/* font-family: 'Handlee', cursive; */
 }

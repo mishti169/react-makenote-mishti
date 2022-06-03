@@ -6,15 +6,29 @@ const Header = () => {
 		<div className='headerWrapper'>
 			<div className='notePenWrapper'>
 				<div className='titleIconWrapper'>
-					<h3>Make Note</h3>
-					<span class='material-symbols-outlined '>edit_note</span>
+					<h2 className='headerTitle'>Make Note</h2>
+					<span class='material-symbols-outlined noteIcon '>edit_note</span>
 				</div>
 			</div>
-			<a href='https://github.com/mishti169' className='headerLink'>
-				Git Hub
-			</a>
+			<div className='linkWrapper'>
+				<a
+					href='https://github.com/mishti169'
+					target='_blank'
+					className='headerLink'
+					rel='noreferrer'
+				>
+					Git Hub
+				</a>
+				<a
+					href='https://twitter.com/Mishti169'
+					target='_blank'
+					className='headerLink'
+					rel='noreferrer'
+				>
+					Twitter
+				</a>
+			</div>
 		</div>
 	);
 };
-
 export default Header;

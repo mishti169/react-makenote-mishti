@@ -33,6 +33,8 @@ const TakeNote = () => {
 	const onPinNote = () => {
 		const y = getCurrentTypedNote();
 		setPinnedNotes([y, ...pinnedNotes]);
+		setTextVal('');
+		setTitleVal('');
 	};
 	const onDelEmptyMakeNote = () => {
 		setTextVal('');
@@ -40,14 +42,11 @@ const TakeNote = () => {
 	};
 	return (
 		<>
-			<div className='takeNoteWrapper'>
-				<button
-					onClick={onPinNote}
-					className='addNoteTrashAndPinBtn pinBtnOfTakeNote pinRotate'
-				>
-					<i className='fa-solid fa-thumbtack '></i>
+			<div className='takeNoteWrapper  border borderRadius'>
+				<button onClick={onPinNote} className='pinBtn pinRotate'>
+					<i className='fa-solid fa-thumbtack iconColor'></i>
 				</button>
-				<div>
+				<div className='titleContainer'>
 					<input
 						placeholder='Title'
 						className='inputBox titleInputBox'
@@ -55,23 +54,26 @@ const TakeNote = () => {
 						onChange={changeTitleInputVal}
 						autoFocus
 					/>
-					<textarea
-						placeholder='Make a note...'
-						rows='6'
-						cols='46'
-						className='inputBox noteInputBox'
-						value={textVal}
-						onChange={changeTextInputVal}
-					/>
 				</div>
+				<textarea
+					placeholder='Make a note...'
+					rows='6'
+					cols='46'
+					className='inputBox noteInputBox'
+					value={textVal}
+					onChange={changeTextInputVal}
+				/>
 				<div className='addNoteBtnAndTrashBtnContainer'>
 					<button
-						className='addNoteTrashAndPinBtn'
+						className='addNoteTrashAndPinBtn trash '
 						onClick={onDelEmptyMakeNote}
 					>
-						<i className='fa-solid fa-trash'></i>
+						<i className='fa-solid fa-trash iconColor'></i>
 					</button>
-					<button onClick={onSaveNote} className='addNoteTrashAndPinBtn'>
+					<button
+						onClick={onSaveNote}
+						className='addNote addNoteTrashAndPinBtn border borderRadius textColor'
+					>
 						Add Note
 					</button>
 				</div>

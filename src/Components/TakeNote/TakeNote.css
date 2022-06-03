@@ -1,26 +1,26 @@
 .takeNoteWrapper {
-	border: 1px solid;
+	/* border: 2px solid #d5b9b2; */
 	min-height: 200px;
 	max-width: 600px;
 	padding: 30px;
 	position: relative;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
 }
 .inputBox {
-	/* color: gray; */
 	display: block;
 	border: none;
 	font-size: 20px;
-	/* border: 1px solid gray; */
 	resize: none;
+	width: 100%;
 }
 input:focus {
 	outline: none;
 }
 .titleInputBox {
 }
-.noteInputBox {
-	margin-top: 30px;
-}
+
 .noteInputBox:focus {
 	outline: none;
 }
@@ -34,13 +34,49 @@ input:focus {
 	background: transparent;
 	cursor: pointer;
 	border: none;
-	font-size: 18px;
+}
+.addNote {
+	font-size: 1.5em;
+}
+.addNote:hover {
+	background: #ece2d0;
+	border: 2px solid #a26769;
+}
+.pinBtn {
+	display: flex;
+	position: absolute;
+	right: -26px;
+	font-size: 36px;
+	top: -30px;
+	background: #ece2d0;
+	padding: 10px;
+	border-radius: 100%;
+	width: 60px;
+	height: 60px;
+	align-items: center;
+	justify-content: center;
 }
 
-.pinBtnOfTakeNote {
+.border {
+	border: 2px solid #ece2d0;
+}
+
+.borderRadius {
+	border-radius: 14px;
+}
+
+.iconColor {
+	color: #a26769;
+}
+.textColor {
+	color: #a26769;
+}
+
+.letterSpacing {
+	letter-spacing: 1px;
+}
+
+.titleContainer {
 	display: flex;
-	color: brown;
-	position: absolute;
-	right: 20px;
-	font-size: 20px;
+	align-items: center;
 }

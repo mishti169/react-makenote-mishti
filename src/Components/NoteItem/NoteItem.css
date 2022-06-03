@@ -1,10 +1,10 @@
 .NoteItemWrapper {
-	border: 2px solid;
 	min-width: 300px;
 	min-height: 200px;
-	border-radius: 6px;
 	position: relative;
+	padding: 1rem;
 }
+
 .pinAndTrashBtn {
 	font-size: 18px;
 	position: absolute;
@@ -15,14 +15,10 @@
 .pin {
 	top: 20px;
 	right: 20px;
-	color: brown;
+	color: #a26769;
+	transition: all ease ease-out 0.9s;
 }
 
 .pinRotate {
 	transform: rotate(45deg);
-}
-
-.trash {
-	left: 20px;
-	bottom: 20px;
 }

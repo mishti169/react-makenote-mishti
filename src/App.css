@@ -36,6 +36,10 @@ button {
 	background: transparent;
 }
 
+button:disabled {
+	cursor: not-allowed;
+}
+
 .noteTitle,
 .noteDescription {
 	color: black;

@@ -7,7 +7,7 @@ const Header = () => {
 			<div className='notePenWrapper'>
 				<div className='titleIconWrapper'>
 					<h2 className='headerTitle'>Make Note</h2>
-					<span class='material-symbols-outlined noteIcon '>edit_note</span>
+					<span className='material-symbols-outlined noteIcon '>edit_note</span>
 				</div>
 			</div>
 			<div className='linkWrapper'>

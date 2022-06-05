@@ -53,3 +53,6 @@ button:disabled {
 .notAllowed {
 	cursor: not-allowed !important;
 }
+.mr10 {
+	margin-right: 10px;
+}

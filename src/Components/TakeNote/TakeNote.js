@@ -8,6 +8,7 @@ const TakeNote = () => {
 	const [textVal, setTextVal] = useAtom(inputText);
 	const [othersNotes, setOthersNote] = useAtom(otherNote);
 	const [pinnedNotes, setPinnedNotes] = useAtom(pinNote);
+	const isDisable = titleVal === '' || textVal === '';
 
 	const getCurrentTypedNote = () => {
 		return {
@@ -71,8 +72,11 @@ const TakeNote = () => {
 						<i className='fa-solid fa-trash iconColor'></i>
 					</button>
 					<button
+						disabled={isDisable}
 						onClick={onSaveNote}
-						className='addNote addNoteTrashAndPinBtn border borderRadius textColor'
+						className={`addNote addNoteTrashAndPinBtn border borderRadius textColor ${
+							isDisable ? 'notAllowed' : ''
+						}`}
 					>
 						Add Note
 					</button>

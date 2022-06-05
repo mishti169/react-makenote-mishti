@@ -46,3 +46,6 @@ button {
 	text-overflow: ellipsis;
 	width: 100%;
 }
+.notAllowed {
+	cursor: not-allowed !important;
+}

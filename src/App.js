@@ -11,9 +11,11 @@ function App() {
 	return (
 		<div className='App'>
 			<Header />
-			<TakeNote />
-			<NoteList title='Pinned' notes={pinnedNotes} id='pinned' />
-			<NoteList title='Others' notes={othersNotes} id='others' />
+			<div className='mainContainer letterSpacing'>
+				<TakeNote />
+				<NoteList title='Pinned' notes={pinnedNotes} id='pinned' />
+				<NoteList title='Others' notes={othersNotes} id='others' />
+			</div>
 		</div>
 	);
 }

@@ -1,28 +1,38 @@
 .NoteItemWrapper {
-	border: 2px solid;
-	min-width: 300px;
-	min-height: 200px;
-	border-radius: 6px;
-	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 16px;
+	padding: 1rem;
 }
-.pinAndTrashBtn {
-	font-size: 18px;
-	position: absolute;
-	background: transparent;
-	border: none;
+.pinBtnWrapper {
+	display: flex;
+	justify-content: flex-end;
 }
 
-.pin {
-	top: 20px;
-	right: 20px;
-	color: brown;
+.pinAndTrashBtn {
+	font-size: 1.4rem;
 }
 
 .pinRotate {
 	transform: rotate(45deg);
 }
+.trashBtnWrapper {
+	display: flex;
+	justify-content: flex-start;
+}
+.textWrapper {
+	height: 150px;
+	width: 300px;
+}
 
-.trash {
-	left: 20px;
-	bottom: 20px;
+.noteDescription {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	text-align: justify;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 7;
+	white-space: initial;
 }

@@ -44,7 +44,7 @@ const NoteItem = (props) => {
 				<h3 className='noteTitle'>{props.title}</h3>
 				<h6 className='noteDescription ellipsis'>{props.text}</h6>
 			</div>
-			<button className='trashBtnWrapper pinAndTrashBtn'>
+			<button className='trashBtnWrapper pinAndTrashBtn' onClick={onDelete}>
 				<i className='fa-solid fa-trash iconColor'></i>
 			</button>
 		</div>

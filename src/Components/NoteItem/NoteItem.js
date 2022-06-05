@@ -33,22 +33,19 @@ const NoteItem = (props) => {
 
 	return (
 		<div className='NoteItemWrapper  border borderRadius'>
-			<button className='pin pinAndTrashBtn' onClick={onPin}>
+			<button className='pinBtnWrapper pinAndTrashBtn' onClick={onPin}>
 				<i
-					className={`fa-solid fa-thumbtack ${
+					className={`fa-solid fa-thumbtack iconColor ${
 						type === 'others' ? 'pinRotate' : ''
 					}`}
 				></i>
 			</button>
-			<div>
+			<div className='textWrapper'>
 				<h3 className='noteTitle'>{props.title}</h3>
-				<h6 className='noteDescription'>{props.text}</h6>
+				<h6 className='noteDescription ellipsis'>{props.text}</h6>
 			</div>
-			<button
-				className='trash pinAndTrashBtn border iconColor'
-				onClick={onDelete}
-			>
-				<i className='fa-solid fa-trash'></i>
+			<button className='trashBtnWrapper pinAndTrashBtn'>
+				<i className='fa-solid fa-trash iconColor'></i>
 			</button>
 		</div>
 	);

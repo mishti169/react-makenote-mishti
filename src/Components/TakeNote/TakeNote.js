@@ -74,9 +74,7 @@ const TakeNote = () => {
 					<button
 						disabled={isDisable}
 						onClick={onSaveNote}
-						className={`addNote addNoteTrashAndPinBtn border borderRadius textColor ${
-							isDisable ? 'notAllowed' : ''
-						}`}
+						className='addNote addNoteTrashAndPinBtn border borderRadius textColor'
 					>
 						Add Note
 					</button>

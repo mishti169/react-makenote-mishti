@@ -17,18 +17,10 @@ function App() {
 		localStorage.setItem(OTHERS_NOTES_LS, JSON.stringify(othersNotes));
 	}, [pinnedNotes, othersNotes]);
 
-	const onSavePermanent = () => {
-		const strX = JSON.stringify(pinnedNotes);
-		localStorage.setItem('pinNotes', strX);
-	};
-
 	return (
 		<div className='App'>
 			<Header />
 			<div className='mainContainer letterSpacing'>
-				<button className='border borderRadius' onClick={onSavePermanent}>
-					Save Permanently
-				</button>
 				<TakeNote />
 				{!!pinnedNotes.length && (
 					<NoteList title='Pinned' notes={pinnedNotes} id='pinned' />

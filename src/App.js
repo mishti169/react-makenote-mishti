@@ -13,8 +13,12 @@ function App() {
 			<Header />
 			<div className='mainContainer letterSpacing'>
 				<TakeNote />
-				<NoteList title='Pinned' notes={pinnedNotes} id='pinned' />
-				<NoteList title='Others' notes={othersNotes} id='others' />
+				{!!pinnedNotes.length && (
+					<NoteList title='Pinned' notes={pinnedNotes} id='pinned' />
+				)}
+				{!!othersNotes.length && (
+					<NoteList title='Others' notes={othersNotes} id='others' />
+				)}
 			</div>
 		</div>
 	);

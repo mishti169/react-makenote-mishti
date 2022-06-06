@@ -1,5 +1,4 @@
 .takeNoteWrapper {
-	/* border: 2px solid #d5b9b2; */
 	min-height: 200px;
 	max-width: 600px;
 	padding: 30px;
@@ -55,6 +54,7 @@ input:focus {
 	height: 60px;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 }
 
 .border {
@@ -69,7 +69,7 @@ input:focus {
 	color: #a26769;
 }
 .textColor {
-	color: #a26769;
+	color: var(--text-color);
 }
 
 .letterSpacing {

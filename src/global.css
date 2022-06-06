@@ -1,0 +1,12 @@
+:root {
+	--text-color: #a26769;
+	--bg-color: white;
+	--input-box: white;
+}
+
+.darkTheme {
+	--text-color: #bf9a8a;
+	--bg-color: black;
+	--input-box: black;
+	--input-placeholder: #bf9a8a;
+}

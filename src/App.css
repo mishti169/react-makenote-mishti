@@ -1,14 +1,22 @@
 * {
 	font-family: 'Patrick Hand SC', cursive;
 	box-sizing: border-box;
-	color: #a26769;
+	color: var(--text-color);
+}
+
+body {
+	background-color: var(--bg-color);
 }
 
 input,
 textarea {
-	color: black;
+	background: var(--input-box);
 }
 
+/* .noteTitle,
+.noteDescription {
+	color: black;
+} */
 h1,
 h2,
 h3,
@@ -23,7 +31,7 @@ h6 {
 	position: relative;
 }
 .mainContainer {
-	padding: 30px;
+	padding: 1rem;
 	padding-top: 10rem;
 }
 
@@ -36,13 +44,30 @@ button {
 	background: transparent;
 }
 
-.noteTitle,
-.noteDescription {
-	color: black;
+button:disabled {
+	cursor: not-allowed;
 }
+
 .ellipsis {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	width: 100%;
+}
+.notAllowed {
+	cursor: not-allowed !important;
+}
+.mr10 {
+	margin-right: 10px;
+}
+.flexBox {
+	display: flex;
+	gap: 3rem;
+}
+::placeholder {
+	color: var(--input-placeholder);
+}
+.themeIcon {
+	font-size: 2rem;
+	cursor: pointer;
 }

@@ -1,4 +1,3 @@
-import './App.css';
 import Header from './Components/Header/Header';
 import TakeNote from './Components/TakeNote/TakeNote';
 import NoteList from './Components/NoteList/NoteList';
@@ -6,6 +5,8 @@ import { useAtom } from 'jotai';
 import { otherNote, pinNote } from './globalAtom';
 import { useEffect } from 'react';
 import { OTHERS_NOTES_LS, PINNED_NOTES_LS } from './constants';
+import './App.css';
+import './global.css';
 
 function App() {
 	const [pinnedNotes] = useAtom(pinNote);

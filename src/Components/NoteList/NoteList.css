@@ -6,5 +6,13 @@
 .nIHeadingContainer {
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+}
+.delAll {
+	padding: 0.5rem;
+	font-size: 1rem;
+	cursor: pointer;
+}
+.delAll:hover {
+	background: #ece2d0;
+	border: 2px solid #a26769;
 }

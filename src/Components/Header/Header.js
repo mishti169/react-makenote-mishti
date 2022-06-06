@@ -35,9 +35,9 @@ const Header = () => {
 						Twitter
 					</a>
 				</div>
-				<button onClick={onToggleTheme}>
+				<button className='themeIcon' onClick={onToggleTheme}>
 					{isDark ? (
-						<i class='fa-solid fa-sun'></i>
+						<i class='fa-solid fa-sun '></i>
 					) : (
 						<i class='fa-solid fa-moon  '></i>
 					)}

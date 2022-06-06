@@ -54,6 +54,7 @@ input:focus {
 	height: 60px;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 }
 
 .border {

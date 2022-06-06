@@ -50,7 +50,7 @@ const TakeNote = () => {
 				<div className='titleContainer'>
 					<input
 						placeholder='Title'
-						className='inputBox titleInputBox'
+						className='inputBox'
 						value={titleVal}
 						onChange={changeTitleInputVal}
 						autoFocus
@@ -69,7 +69,7 @@ const TakeNote = () => {
 						className='addNoteTrashAndPinBtn trash '
 						onClick={onDelEmptyMakeNote}
 					>
-						<i className='fa-solid fa-trash iconColor'></i>
+						<i className='fa-solid fa-trash'></i>
 					</button>
 					<button
 						disabled={isDisable}

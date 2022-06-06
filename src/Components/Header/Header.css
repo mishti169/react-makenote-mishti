@@ -10,6 +10,7 @@
 .titleIconWrapper {
 	display: flex;
 	align-items: center;
+	gap: 0.3rem;
 }
 .headerTitle {
 	font-family: 'Patrick Hand SC', cursive;

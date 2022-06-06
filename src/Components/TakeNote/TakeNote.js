@@ -15,7 +15,7 @@ const TakeNote = () => {
 		return {
 			title: titleVal,
 			text: textVal,
-			id: parseInt(uuidv4() * 1000),
+			id: uuidv4(),
 		};
 	};
 

@@ -20,7 +20,10 @@ const NoteList = (props) => {
 		<>
 			<div className='nIHeadingContainer'>
 				<h2>{props.title}</h2>
-				<button className='border borderRadius delAll ' onClick={onDelAll}>
+				<button
+					className='border borderRadius delAll letterSpacing'
+					onClick={onDelAll}
+				>
 					<i className='fa-solid fa-trash iconColor mr10 '></i>
 					Delete All
 				</button>
